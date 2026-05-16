@@ -21,4 +21,7 @@ jobs:
 
       - name: Run Market Agent
         env:
-          GROQ_
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          MARKET_BOT_TOKEN: ${{ secrets.MARKET_BOT_TOKEN }}
+          MARKET_CHAT_ID: ${{ secrets.MARKET_CHAT_ID }}
+        run: python market_agent.py
